@@ -6,17 +6,17 @@ function App() {
 let [count, setCount] = useState(0);
 
 let increment = ()=>{
-  setCount(count++);
+  setCount(preCount => preCount+1);
 }
 
 let decrement = ()=>{
   if (count > 0) {
-    setCount(count--);
+    setCount(preCount => preCount>0 ? preCount-1:0);
   }
 }
 
 let reset = ()=>{
-  setCount(count = 0)
+  setCount(0)
 }
 
 
